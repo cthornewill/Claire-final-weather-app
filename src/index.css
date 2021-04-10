@@ -6,6 +6,8 @@ small {
   text-align: center;
   color: #fff;
   font-family: "Nanum Gothic", sans-serif;
+  display: block;
+  padding-top: 10px;
 }
 
 h1 {
