@@ -11,16 +11,27 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&family=Merriweather&family=Nanum+Gothic&family=Playfair+Display:wght@700;900&display=swap"
         rel="stylesheet">
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/220c18dc4c.js" crossorigin="anonymous"></script>
     <title>Claire's Weather App</title>
 </head>
 <body>
     <div class="container">
         <div class="weatherApp">
-    <p class="country">SPAIN</p>     
-    <h1>
-        Madrid
-    </h1>
+            <div class="row">
+                <div class="col-2">
+                    <p class="country">SPAIN</p>  
+                </div>
+                <div class="col-10">
+                    <form class="searchForm">
+                        <input class="searchBox" type="search" name="search" placeholder="Search your city" />
+                        <i class="fa fa-search searchIcon"></i>
+                    </form>
+                </div>
+            </div>
+            <h1>
+            Madrid
+            </h1>
     <p class="date">TODAY'S DATE</p>
 <section class="dateSection">
     

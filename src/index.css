@@ -95,4 +95,40 @@ ul,
 
 .imageIcon {
   max-width: 80px;
+  padding-top: 10px;
+}
+
+.form-control {
+  border-radius: 20px;
+}
+
+.fas {
+  margin-top: none;
+}
+
+.searchIcon {
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+.searchBox {
+  color: #434769;
+  text-align: left;
+  border: none;
+  background: none;
+  padding: 0px 0px 0px 20px;
+}
+
+.searchForm {
+  margin: 0 auto;
+  max-width: 70%;
+  border-radius: 20px;
+  font-weight: 100;
+  text-align: center;
+  color: #818181;
+  background: #fff;
+  position: absolute;
+  right: 30px;
+  background: rgba(256, 256, 256, 0.5);
+  box-shadow: inset 40px 40px 43px -44px rgba(255, 255, 255, 1);
 }
