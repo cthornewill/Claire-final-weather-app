@@ -762,9 +762,9 @@ let windElement = document.querySelector(".windSpeed")
 let dateElement = document.querySelector(".date");
 let iconElement = document.querySelector(".imageIcon");
 
+celciusTemperature = response.data.main.temp;
 
-
-temperatureElement.innerHTML = Math.round(response.data.main.temp);
+temperatureElement.innerHTML = Math.round(celciusTemperature);
 cityElement.innerHTML = response.data.name;
 nowElement.innerHTML = response.data.weather[0].description;
 countryElement.innerHTML = response.data.sys.country;
@@ -791,8 +791,33 @@ function handleSubmit(event) {
 
 }
 
+function convertFahrenheit(event){
+    event.preventDefault();
+    let temperatureElement = document.querySelector(".temperature");
+    
+    celciusLink.classList.remove("active");
+    fahrenheitLink.classList.add("active");
+    let fahrenheitTemperature = (celciusTemperature * 9) /5 + 32; 
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
 
+function convertCelcius(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector(".temperature");
+    temperatureElement.innerHTML  = Math.round(celciusTemperature);
+
+    celciusLink.classList.add("active");
+    fahrenheitLink.classList.remove("active");
+}
+
+let celciusTemperature = null;
 
 
 let form = document.querySelector("#searchInput");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector(".fahrenheit");
+fahrenheitLink.addEventListener("click", convertFahrenheit)
+
+let celciusLink = document.querySelector(".celcius");
+celciusLink.addEventListener("click", convertCelcius)
