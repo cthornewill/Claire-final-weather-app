@@ -21,6 +21,66 @@ function convertCountryCode(countryCode){
     document.querySelector(".country").innerText = getCountryName(countryCode).toUpperCase();
 }
 
+
+//Forecast
+
+function displayForecast(){
+    let forecastElement = document.querySelector("#forecast");
+    let forecastHTML = `<div class="row right-aligned" style="
+    margin-right: -66px;
+">`;
+    forecastHTML = forecastHTML + `
+        <div class="col-3 forecast-box" style="
+        width: 20%;
+    ">
+            <span class="forecast-day">WED</span> 
+            <br>
+            <img src="http://openweathermap.org/img/wn/01d@2x.png" width="36">
+            <br>
+            <span class="maxTemp">18º</span>
+            <span class="minTemp">12º</span>
+        </div>`;
+    
+    forecastHTML = forecastHTML + `
+        <div class="col-3 forecast-box" style="
+        width: 20%;
+    ">
+            <span class="forecast-day">WED</span> 
+            <br>
+            <img src="http://openweathermap.org/img/wn/01d@2x.png" width="36">
+            <br>
+            <span class="maxTemp">18º</span>
+            <span class="minTemp">12º</span>
+        </div>`;
+        forecastHTML = forecastHTML + `
+        <div class="col-3 forecast-box" style="
+        width: 20%;
+    ">
+            <span class="forecast-day">WED</span> 
+            <br>
+            <img src="http://openweathermap.org/img/wn/01d@2x.png" width="36">
+            <br>
+            <span class="maxTemp">18º</span>
+            <span class="minTemp">12º</span>
+        </div>`;
+        forecastHTML = forecastHTML + `
+        <div class="col-3 forecast-box last-forecast-box" style="
+        width: 20%;
+        border-radius: 20px 0px 0px 20px;">
+            <span class="forecast-day">WED</span> 
+            <br>
+            <img src="http://openweathermap.org/img/wn/01d@2x.png" width="36">
+            <br>
+            <span class="maxTemp">18º</span>
+            <span class="minTemp">12º</span>
+        </div>`;
+    forecastHTML = forecastHTML + `</div>`
+    forecastElement.innerHTML = forecastHTML;
+
+}
+
+displayForecast();
+
 //Date
 function formatDate(timestamp){
     let date = new Date(timestamp);
@@ -32,6 +92,8 @@ function formatDate(timestamp){
     return `${day} ${dia}. ${month}`
 }
 
+
+
 // weather
 function displayTemperature(response) {
     let temperatureElement = document.querySelector(".temperature");
@@ -42,6 +104,7 @@ function displayTemperature(response) {
     let dateElement = document.querySelector(".date");
     let iconElement = document.querySelector(".imageIcon");
 
+    
     celciusTemperature = response.data.main.temp;
     temperatureElement.innerHTML = Math.round(celciusTemperature);
     nowElement.innerHTML = response.data.weather[0].description;

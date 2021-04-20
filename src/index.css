@@ -4,7 +4,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 120vh;
 }
 small {
   text-align: center;
@@ -159,4 +159,31 @@ ul,
 
 .gitHubLink {
   color: #fff;
+}
+
+
+.forecast-box {
+  background: rgba(256, 256, 256, 0.3);
+  box-shadow: inset 40px 40px 43px -44px rgba(255, 255, 255, 1);
+  border-radius: 15px;
+  padding: 20px 20px 20px 20px;
+  display: block;
+  text-align: center;
+  margin: 0 10px;
+  font-size: 12px;
+  color: #434769;
+  width: 20%;
+}
+
+.forecast-day {
+  font-weight: 700;
+}
+
+.maxTemp {
+  color: #434769;
+  font-weight: 700;
+}
+
+.minTemp {
+  color: #1e8793;
 }
