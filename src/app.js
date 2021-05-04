@@ -114,6 +114,9 @@ function convertFahrenheit(event){
     fahrenheitLink.classList.add("active");
     let fahrenheitTemperature = (celciusTemperature * 9) /5 + 32; 
     temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+
+    document.querySelectorAll('.maxTemp').forEach(element => element.innerHTML = Math.round((element.innerHTML.split('º')[0] * 9) /5 + 32)+'º');
+    document.querySelectorAll('.minTemp').forEach(element => element.innerHTML = Math.round((element.innerHTML.split('º')[0] * 9) /5 + 32)+'º');
 }
 
 function convertCelcius(event) {
@@ -123,6 +126,9 @@ function convertCelcius(event) {
 
     celciusLink.classList.add("active");
     fahrenheitLink.classList.remove("active");
+
+    document.querySelectorAll('.maxTemp').forEach(element => element.innerHTML = Math.round((element.innerHTML.split('º')[0] - 32) * 5 / 9)+'º');
+    document.querySelectorAll('.minTemp').forEach(element => element.innerHTML = Math.round((element.innerHTML.split('º')[0] - 32) * 5 / 9)+'º');
 
 }
 
