@@ -187,3 +187,7 @@ ul,
 .minTemp {
   color: #1e8793;
 }
+
+.weather-forecast .forecast-box:last-child {
+  border-radius: 20px 0px 0px 20px;
+}
